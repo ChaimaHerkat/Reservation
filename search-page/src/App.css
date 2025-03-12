@@ -1,0 +1,171 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6c1d45;
+  color: white;
+  padding: 15px 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Icône de compte */
+.compte-link i {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* User Section */
+.user {
+  display: flex;
+  align-items: center;
+}
+
+/* Bouton Logout */
+.logout {
+  background: white;
+  color: #6c1d45;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.logout:hover {
+  background: #6c1d45;
+  color: white;
+}
+
+/* Booking Section */
+.booking {
+  text-align: center;
+  padding: 30px;
+}
+
+.booking h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.booking h3 {
+  color: #555;
+}
+
+/* Flight Cards */
+.flight-card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flight-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.classes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.class {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+}
+
+.class h4 {
+  margin: 5px 0;
+}
+
+.class p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.class button {
+  background: #6c1d45;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.class button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.unavailable {
+  background: #f1f1f1;
+  color: black;
+  font-weight: bold;
+}
+
+/* Correction du bug de l'alignement du header */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+  }
+
+  nav ul {
+      flex-direction: ligne;
+      gap: 10px;
+  }
+
+  .user {
+      margin-top: 10px;
+  }
+}
