@@ -22,7 +22,7 @@ interface Flight {
 const Header: React.FC = () => {
   return (
     <header>
-      <div className="logo">✈️ Air Algerie</div>
+      <div className="logo">✈️ Air Algérie</div>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -67,26 +67,61 @@ const FlightCard: React.FC<Flight> = ({ departure, arrival, depTime, arrTime, cl
 // Composant Booking
 const Booking: React.FC = () => {
   const flights: Flight[] = [
-    { departure: "NSK", arrival: "BOM", depTime: "16:44", arrTime: "17:50", classes: [
-      { type: "Economy", price: "INR 1000", seats: 35, available: true },
-      { type: "Business", price: "INR 8000", seats: 20, available: true },
-      { type: "First Class", price: "INR 9000", seats: 15, available: true }
-    ]},
-    { departure: "NSK", arrival: "BOM", depTime: "19:50", arrTime: "21:40", classes: [
-      { type: "Economy", price: "INR 1002", seats: 20, available: true },
-      { type: "Business", price: "INR 8002", seats: 10, available: true },
-      { type: "First Class", price: "INR 5002", seats: 15, available: true }
-    ]},
-    { departure: "NSK", arrival: "BOM", depTime: "23:30", arrTime: "1:40", classes: [
-      { type: "Economy", price: "INR 1002", seats: 20, available: true },
-      { type: "Business", price: "INR 8002", seats: 10, available: true },
-      { type: "First Class", price: "INR 5002", seats: 15, available: true }
-    ]},
-    { departure: "NSK", arrival: "BOM", depTime: "3:10", arrTime: "4:20", classes: [
-      { type: "Economy", price: "INR 1002", seats: 20, available: true },
-      { type: "Business", price: "INR 8002", seats: 10, available: true },
-      { type: "First Class", price: "INR 5002", seats: 15, available: true }
-    ]}
+    {
+      departure: "NSK",
+      arrival: "BOM",
+      depTime: "16:44",
+      arrTime: "17:50",
+      classes: [
+        { type: "Economy", price: "INR 1000", seats: 35, available: true },
+        { type: "Business", price: "INR 8000", seats: 20, available: true },
+        { type: "First Class", price: "INR 9000", seats: 15, available: true }
+      ]
+    },
+    {
+      departure: "NSK",
+      arrival: "BOM",
+      depTime: "19:50",
+      arrTime: "21:40",
+      classes: [
+        { type: "Economy", price: "INR 1002", seats: 20, available: true },
+        { type: "Business", price: "INR 8002", seats: 10, available: true },
+        { type: "First Class", price: "INR 5002", seats: 15, available: true }
+      ]
+    },
+    {
+      departure: "NSK",
+      arrival: "BOM",
+      depTime: "23:50",
+      arrTime: "01:40",
+      classes: [
+        { type: "Economy", price: "INR 1502", seats: 30, available: true },
+        { type: "Business", price: "INR 8092", seats: 40, available: true },
+        { type: "First Class", price: "INR 9802", seats: 15, available: true }
+      ]
+    },
+    {
+      departure: "NSK",
+      arrival: "BOM",
+      depTime: "04:50",
+      arrTime: "06:40",
+      classes: [
+        { type: "Economy", price: "INR 2002", seats: 15, available: true },
+        { type: "Business", price: "INR 7502", seats: 30, available: true },
+        { type: "First Class", price: "INR 4002", seats: 35, available: true }
+      ]
+    },
+    {
+      departure: "NSK",
+      arrival: "BOM",
+      depTime: "9:50",
+      arrTime: "11:40",
+      classes: [
+        { type: "Economy", price: "INR 3002", seats: 10, available: true },
+        { type: "Business", price: "INR 8702", seats: 25, available: true },
+        { type: "First Class", price: "INR 9002", seats: 15, available: true }
+      ]
+   }
   ];
 
   return (
@@ -107,6 +142,31 @@ const App: React.FC = () => {
     <div>
       <Header />
       <Booking />
+
+      {/* Pied de page */}
+      <footer className="footer">
+        <p>
+          <strong>
+            Tous droits réservés | <a href="/mentions-legales">Mentions légales</a> | 
+            <a href="/confidentialite"> Politique de confidentialité</a>
+          </strong>
+        </p>
+        <div className="social-icons">
+          <a href="#" target="_blank">
+            <i className="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-twitter"></i> Twitter
+          </a>
+        </div>
+        <p>© 2025 Air Algérie – Tous droits réservés.</p>
+      </footer>
     </div>
   );
 };

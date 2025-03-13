@@ -5,11 +5,11 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"card" | "upi">("card"); // Gère les onglets avec un type précis
 
   return (
-    <div>
+    <>
       {/* Barre de navigation */}
       <header>
         <div className="navbar">
-          <div className="logo">✈️ Air Algerie</div>
+          <div className="logo">✈️ Air Algérie</div>
           <nav>
             <a href="#">HOME</a>
             <a href="#">MY FLIGHTS</a>
@@ -87,7 +87,32 @@ const App: React.FC = () => {
           )}
         </div>
       </div>
-    </div>
+
+      {/* Pied de page */}
+      <footer className="footer">
+        <p>
+          <strong>
+            Tous droits réservés | <a href="/mentions-legales">Mentions légales</a> | 
+            <a href="/confidentialite"> Politique de confidentialité</a>
+          </strong>
+        </p>
+        <div className="social-icons">
+          <a href="#" target="_blank">
+            <i className="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-twitter"></i> Twitter
+          </a>
+        </div>
+        <p>© 2025 Air Algérie – Tous droits réservés.</p>
+      </footer>
+    </>
   );
 };
 

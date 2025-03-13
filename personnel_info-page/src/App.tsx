@@ -54,7 +54,7 @@ const PassengerCard: React.FC<PassengerCardProps> = ({ passengerNumber }) => {
 // Composant principal App
 const App: React.FC = () => {
   return (
-    <div>
+    <>
       {/* Header */}
       <header>
         <nav>
@@ -93,7 +93,32 @@ const App: React.FC = () => {
           </div>
         </form>
       </main>
-    </div>
+
+      {/* Pied de page */}
+      <footer className="footer">
+        <p>
+          <strong>
+            Tous droits réservés | <a href="/mentions-legales">Mentions légales</a> | 
+            <a href="/confidentialite"> Politique de confidentialité</a>
+          </strong>
+        </p>
+        <div className="social-icons">
+          <a href="#" target="_blank">
+            <i className="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="#" target="_blank">
+            <i className="fab fa-twitter"></i> Twitter
+          </a>
+        </div>
+        <p>© 2025 Air Algérie – Tous droits réservés.</p>
+      </footer>
+    </>
   );
 };
 

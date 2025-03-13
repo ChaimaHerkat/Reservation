@@ -1,3 +1,10 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +13,7 @@ body {
   text-align: center;
 }
 
+/* --- NAVBAR --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,8 +32,12 @@ body {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: black;
+  color: white; /* Changement pour meilleure visibilité */
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .user-info {
@@ -46,18 +58,27 @@ nav a {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  transition: background 0.3s;
 }
 
+.logout-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* --- CONTENU PRINCIPAL --- */
 .container {
   margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 
 .payment-box {
   background: white;
   padding: 30px;
-  width: 470px;
+  width: 100%;
   min-height: 340px;
-  margin: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -68,6 +89,7 @@ nav a {
   transform: scale(1.03);
 }
 
+/* --- ONGLETS DE PAIEMENT --- */
 .tabs {
   display: flex;
   border-bottom: 2px solid #ddd;
@@ -82,6 +104,11 @@ nav a {
   background: none;
   font-weight: bold;
   color: #6c1d45;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  background-color: #f0e0e6;
 }
 
 .tab.active {
@@ -89,12 +116,7 @@ nav a {
   color: black;
 }
 
-.total-fare {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
+/* --- FORMULAIRE DE PAIEMENT --- */
 .payment-form {
   display: none;
 }
@@ -103,7 +125,8 @@ nav a {
   display: block;
 }
 
-.payment-box input, .payment-box select {
+.payment-box input,
+.payment-box select {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -117,7 +140,8 @@ nav a {
   gap: 10px;
 }
 
-.row select, .row input {
+.row select,
+.row input {
   flex: 1;
 }
 
@@ -127,6 +151,7 @@ nav a {
   margin: 5px 0;
 }
 
+/* --- BOUTON DE PAIEMENT --- */
 .pay-btn {
   width: 100%;
   padding: 14px;
@@ -142,4 +167,41 @@ nav a {
 .pay-btn:hover {
   background: #5a1537;
   transform: scale(1.05);
+}
+
+/* --- PIED DE PAGE --- */
+.footer {
+  background: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 40px;
+}
+
+/* Icônes des réseaux sociaux */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6c1d45;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons i {
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
 }
