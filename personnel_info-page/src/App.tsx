@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import logo from "./Logo/logo.png"; 
+
+console.log(logo);
 
 // Définition du type des props pour PassengerCard
 interface PassengerCardProps {
@@ -57,19 +60,13 @@ const App: React.FC = () => {
     <>
       {/* Header */}
       <header>
-        <nav>
-          <div className="logo">✈️ Air Algerie</div>
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">MY FLIGHTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">FEEDBACK</a></li>
-            <li>
-              <a href="#" className="compte-link">
-                <i className="fas fa-user"></i> COMPTE
-              </a>
-            </li>
-          </ul>
+        <img src={logo} alt="Air Algérie" className="logo" />
+        <nav className="nav-links">
+          <a href="#">HOME</a>
+          <a href="#">MY FLIGHTS</a>
+          <a href="#">ABOUT</a>
+          <a href="#">FEEDBACK</a>
+          <a href="#" className="compte-link"><i className="fas fa-user"></i> COMPTE</a>
           <div className="user-info">
             <button className="logout-btn">Logout ⮕</button>
           </div>

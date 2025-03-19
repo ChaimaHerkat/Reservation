@@ -8,46 +8,36 @@ body {
 
 /* --- HEADER --- */
 header {
-  background: #6c1d45;
-  padding: 10px 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+  height: 60px;
 }
 
-nav ul {
-  list-style: none;
+
+/* Navigation */
+.nav-links {
   display: flex;
-  margin-left: auto;
-  padding: 0;
+  gap: 20px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+.nav-links a {
   text-decoration: none;
+  background-color: red;
   color: white;
-  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  background-color: darkred;
 }
 
 .user-info {
@@ -58,8 +48,8 @@ nav ul li a:hover {
 }
 
 .logout-btn {
-  background: white;
-  color: #6c1d45;
+  background: red;
+  color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -68,9 +58,14 @@ nav ul li a:hover {
 }
 
 .logout-btn:hover {
-  background: #f0e0e6;
+  background: darkred;
 }
 
+h2 {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
 /* --- MAIN SECTION --- */
 main {
   max-width: 900px;
@@ -94,7 +89,7 @@ main {
 }
 
 .passenger-card h3 {
-  color: #6c1d45;
+  color: red;
 }
 
 .form-group {
@@ -145,21 +140,21 @@ main {
 }
 
 .back-btn {
-  background: #6c1d45;
+  background: red;
   color: white;
 }
 
 .back-btn:hover {
-  background: #5a183a;
+  background: darkred;
 }
 
 .submit-btn {
-  background: #6c1d45;
+  background: red;
   color: white;
 }
 
 .submit-btn:hover {
-  background: #5a183a;
+  background: darkred;
 }
 
 /* --- PIED DE PAGE --- */
@@ -186,7 +181,7 @@ main {
   gap: 8px;
   font-size: 16px;
   font-weight: bold;
-  color: #6c1d45;
+  color: red;
   text-decoration: none;
   transition: 0.3s;
 }

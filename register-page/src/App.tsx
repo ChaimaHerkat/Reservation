@@ -1,25 +1,36 @@
 import React from "react";
 import "./App.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import logo from "./Logo/logo.png"; 
+
+console.log(logo);
 
 const App: React.FC = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("Formulaire soumis !");
-  };
+  const handleBack = () => {
+    console.log("Back button clicked");
+};
 
+const handleRegister = () => {
+  console.log("Register button clicked");
+  console.log("Formulaire soumis !");
+};
+
+const handleSubmit = (event: React.FormEvent) => {
+  event.preventDefault();
+  console.log("Formulaire soumis !");
+};
+
+ 
   return (
     <div>
       {/* Barre de navigation */}
       <header>
-        <div className="logo">✈️ Air Algerie</div>
-        <nav>
-          <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
-          </ul>
-        </nav>
-      </header>
+    <img src={logo} alt="Air Algérie" className="logo" />
+    <nav className="nav-links">
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT</a>
+    </nav>
+    </header> {/* <- Fermeture correcte de `header` */}
 
       {/* Formulaire d'inscription */}
       <section className="register-section">
@@ -67,10 +78,11 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            <div className="buttons">
-              <button type="button" className="back-btn">Back</button>
-              <button type="submit" className="register-btn">Register</button>
+            <div className="form-buttons">
+             <button type="button" onClick={handleBack}>Back</button>
+             <button type="submit">Register</button> {/* "submit" car il envoie le formulaire */}
             </div>
+
           </form>
         </div>
       </section>

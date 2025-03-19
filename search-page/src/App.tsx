@@ -1,5 +1,9 @@
 import React from "react";
 import "./App.css";
+import logo from "./Logo/logo.png"; 
+
+console.log(logo);
+
 
 // Définition des types pour les classes de vol
 interface FlightClass {
@@ -22,15 +26,13 @@ interface Flight {
 const Header: React.FC = () => {
   return (
     <header>
-      <div className="logo">✈️ Air Algérie</div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">My Flights</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Feedback</a></li>
-          <li><a href="#" className="compte-link"><i className="fas fa-user"></i> COMPTE</a></li>
-        </ul>
+      <img src={logo} alt="Air Algérie" className="logo" />
+      <nav className="nav-links">
+        <a href="#">Home</a>
+        <a href="#">My Flights</a>
+        <a href="#">About</a>
+        <a href="#">Feedback</a>
+        <a href="#" className="compte-link"><i className="fas fa-user"></i> COMPTE</a>
       </nav>
       <div className="user">
         <button className="logout">Logout ⮕</button>
